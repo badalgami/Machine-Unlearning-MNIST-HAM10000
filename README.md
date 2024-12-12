@@ -9,7 +9,7 @@ This repository demonstrates the implementation of **Machine Unlearning** and **
 The dataset used is the **HAM10000 Dataset**, which consists of skin lesion images and their associated metadata. The dataset includes:
 - **10,015 high-resolution images** of skin lesions.
 - Labels (`dx`) for 7 classes, including melanoma, nevus, and others.
-- Images divided into two parts for initial processing.
+- Images are divided into two parts for initial processing.
 
 ### Preprocessing Steps:
 1. **Data Consolidation**:
@@ -25,7 +25,7 @@ The dataset used is the **HAM10000 Dataset**, which consists of skin lesion imag
 
 ### 1. **Machine Unlearning**
 - Implements selective retraining on the **retain dataset** while forgetting specific data.
-- Uses data augmentations (e.g., random flips, rotations, color jitter) to improve generalization.
+- Data augmentations (e.g., random flips, rotations, color jitter) are used to improve generalization.
 - Includes early stopping to optimize training efficiency.
 
 #### Key Features:
@@ -45,8 +45,8 @@ The dataset used is the **HAM10000 Dataset**, which consists of skin lesion imag
 | **Attack Accuracy**       | 0.50                         | 0.50                                    |
 | **Initial Loss**          | 0.9350                       | 0.7792                                  |
 | **Final Loss**            | 0.7055                       | 0.6932                                  |
-| **Test Loss (Mean)**      | 0.735 (\u00b10.230)               | 0.738 (\u00b10.275)                          |
-| **Forget Loss (Mean)**    | 0.712 (\u00b10.150)               | 0.719 (\u00b10.180)                          |
+| **Test Loss (Mean)**      | 0.735 (±0.230)               | 0.738 (±0.275)                          |
+| **Forget Loss (Mean)**    | 0.712 (±0.150)               | 0.719 (±0.180)                          |
 
 **Key Insights:**
 - **Attack Accuracy**: Both models achieve equivalent attack resistance, ensuring robustness against privacy breaches.
@@ -70,5 +70,3 @@ The dataset used is the **HAM10000 Dataset**, which consists of skin lesion imag
    - Extend the implementation to include sharded and sliced training for finer-grained control of unlearning.
 2. **Formal Evaluation Metrics**:
    - Implement advanced metrics such as the **Anamnesis Index (AIN)** to evaluate the effectiveness of unlearning quantitatively.
-3. **Real-World Applications**:
-   - Explore use cases in privacy-preserving AI, healthcare, and compliance with data deletion laws like GDPR.
